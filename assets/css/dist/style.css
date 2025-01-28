@@ -688,6 +688,9 @@
   .isolation-auto {
     isolation: auto;
   }
+  .z-1 {
+    z-index: 1;
+  }
   .z-auto {
     z-index: auto;
   }
@@ -828,6 +831,9 @@
     @media (width >= 96rem) {
       max-width: 96rem !important;
     }
+  }
+  .m-0 {
+    margin: calc(var(--spacing) * 0);
   }
   .mt-28 {
     margin-top: calc(var(--spacing) * 28);
