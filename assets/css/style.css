@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import "tailwindcss";
+@theme {
+        --font-cormorant:'Cormorant Garamond';
+        --font-varsailles:'Versailles';
+        --font-josefins:"Josefin Sans", serif;
+      /* ======================================================= SCREENS ============================================================ */
+
+      --breakpoint-xxs: 320px;
+      --breakpoint-xs: 425px;
+      --breakpoint-576: 576px;
+      --breakpoint-sm: 640px;
+      --breakpoint-md: 768px;
+      --breakpoint-992: 992px;
+      --breakpoint-lg: 1024px;
+      --breakpoint-large: 1199px;
+      --breakpoint-xl: 1280px;
+      --breakpoint-xxl: 1440px;
+      --breakpoint-xxl: 1512px;
+
+        /* ======================================================= FONT SIZE ============================================================ */
+
+        --text-10:10px;
+        --text-12:12px;
+        --text-14:14px;
+        --text-16:16px;
+        --text-18:18px;
+        --text-20:20px;
+        --text-22:22px;
+        --text-24:24px;
+        --text-26:26px;
+        --text-28:28px;
+        --text-30:30px;
+        --text-32:32px;
+        --text-34:34px;
+        --text-36:36px;
+        --text-38:38px;
+        --text-40:40px;
+        --text-42:42px;
+        --text-44:44px;
+        --text-46:46px;
+        --text-48:48px;
+        --text-50:50px;
+        --text-52:52px;
+        --text-54:54px;
+        --text-56:56px;
+        --text-58:58px;
+        --text-60:60px;
+        --text-62:62px;
+        --text-64:64px;
+        --text-66:66px;
+        --text-68:68px;
+        --text-70:70px;
+        --text-72:72px;
+        --text-74:74px;
+        --text-76:76px;
+        --text-78:78px;
+        --text-80:80px;
+        --text-82:82px;
+        --text-84:84px;
+        --text-86:86px;
+        --text-88:88px;
+        --text-90:90px;
+        --text-92:92px;
+        --text-94:94px;
+        --text-96:96px;
+        --text-98:98px;
+        --text-100:100px;
+        --text-102:102px;
+        --text-104:104px;
+        --text-106:106px;
+        --text-108:108px;
+        --text-110:110px;
+        --text-112:112px;
+        --text-114:114px;
+        --text-116:116px;
+        --text-118:118px;
+        --text-120:120px;
+
+    /* ======================================================= COLORS ============================================================ */
+
+        --color-pink: #CA2180;
+        --color-orange: #FB5607;
+        --color-skin:#FAF3E0;
+        --color-charcoal:#12171B;
+        --color-white:#FFFFFF;
+        --color-gray:#8A8068;
+        --color-blue:#3B72AA;
+        --color-lightbrown:#E7DCC0;
+        --color-lightgray:#E9E9E9;
+
+    /* ======================================================= SPACING ============================================================ */
+
+        --spacing: 1px;
+
+    /* ======================================================= BORDER RADIUS ============================================================ */
+
+        --radius-none:0;
+        --radius-1:1px;
+        --radius-2:2px;
+        --radius-4:4px;
+        --radius-5:5px;
+        --radius-10:10px;
+        --radius-15:15px;
+        --radius-20:20px;
+        --radius-30:30px;
+        --radius-50:50px;
+        --radius-55:55px;
+        --radius-100:100px;
+        --radius-500:500px;
+        --radius-999:999px;
+        --radius-100per:100%;
+
+        /* ======================================================= LETTER SPACING ============================================================ */
+
+        --tracking-custom:0.02em;
+        --tracking-custom-small:0.01em;
+
+        /* ======================================================= BOX SHADOW ============================================================ */
+
+        --shadow-box: 0px 0px 30px rgba(0, 0, 0, 0.15);
+}
+
+@layer base{
+    .container-fluid-lg{
+        @apply px-100 max-lg:px-50 max-md:px-30 max-sm:px-20
+    }
+    .container-fluid{
+        @apply px-75 max-lg:px-50 max-md:px-30 max-sm:px-20
+    }
+    .container-fluid-xl{
+        @apply px-144 max-xxl:px-80 max-xl:px-60 max-large:px-60 max-lg:px-50 max-md:px-30 max-sm:px-20
+    }
+
+    /* ======================================================= TITLE ======================================================= */
+
+    h1,
+    .h1 {
+        @apply text-66 leading-66
+         max-xxl:text-52 max-xxl:leading-52
+            max-xl:text-48 max-xl:leading-48
+                max-large:text-42 max-large:leading-42
+                    max-lg:text-38 max-lg:leading-38
+                     max-md:text-28 max-md:leading-28
+                        max-sm:text-24 max-sm:leading-24    
+    }
+    h2,
+    .h2 {
+        @apply text-50
+    }
+    h3,
+    .h3 {
+       @apply text-30
+    }
+    h4,
+    .h4 {
+        @apply text-28 leading-38
+    }
+    /* h5,
+    .h5 {
+    } */
+
+  /* ======================================================= TITLE FONT FAMILY ======================================================= */
+
+    .title-primary h1,
+    .title-primary h2,
+    .title-primary h3,
+    .title-primary h4,
+    .title-primary h5,
+    .title-primary h6 {
+        @apply font-cormorant
+    }
+
+    .title-secondary h1,
+    .title-secondary h2,
+    .title-secondary h3,
+    .title-secondary h4,
+    .title-secondary h5,
+    .title-secondary h6 {
+        @apply font-varsailles
+    }
+    .title-josefins h1,
+    .title-josefins h2,
+    .title-josefins h3,
+    .title-josefins h4,
+    .title-josefins h5,
+    .title-josefins h6 {
+        @apply font-josefins
+    }
+    .charcoal{
+        @apply text-charcoal
+    }
+    .orange{
+        @apply text-orange
+    }
+    .white{
+        @apply text-white
+    }
+    .content p {
+        @apply mt-5 text-18 leading-28;
+    }
+    .content p:first-child {
+        @apply mt-0;
+    }
+    .content.big p{
+        @apply !text-36 !leading-48
+    }
+    .content-primary  p{
+        @apply !font-josefins
+    }
+    .content-secondary p{
+        @apply !font-cormorant
+    }
+    .prehading span{
+        @apply text-40 text-charcoal
+    }
+    .top-bar-head span{
+        @apply text-22 uppercase font-varsailles
+    }
+}
+
+@layer components{
+    .btn {
+      @apply py-13 px-30 uppercase font-cormorant tracking-custom font-semibold inline-block;
+    }
+    .btn-small{
+        @apply text-20 leading-20
+    }
+    .btn-big{
+        @apply text-24 leading-24
+    }
+    .btn-pink{
+        @apply bg-pink text-white border-[1px] border-pink transition-all ease-in-out duration-300
+    }
+    .btn-pink:hover {
+        @apply bg-white text-pink border-[1px] transition-all ease-in-out duration-300
+    }    
+    .btn-blue{
+        @apply bg-blue text-white border-[1px] border-blue transition-all ease-in-out duration-300
+    }
+    .btn-blue:hover {
+        @apply bg-white text-blue border-[1px] transition-all ease-in-out duration-300
+    }    
+}
+
+@layer utilities{
+    .is-sticky {
+        animation: headerStickyAnimation 0.5s ease-in-out;
+        @apply fixed top-0 left-0 w-full z-50 transition-all duration-500;
+        }
+        @keyframes headerStickyAnimation {
+        0% {
+            opacity: 0.5;
+            transform: translateY(-100%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    header.is-sticky{
+        @apply shadow-sm
+    }
+    .header{
+        @apply bg-white
+    }
+    .top-bar{
+        @apply bg-skin py-10
+    }
+    .top-bar-links a{
+        @apply flex gap-12
+    }
+    .top-bar-links a span{
+        @apply font-josefins text-charcoal font-medium
+    }
+    header nav .cart span{
+        @apply font-josefins text-16 tracking-custom
+    }
+    .bottom-nav nav{
+        @apply overflow-x-auto
+    }
+    .bottom-nav nav ul li a{
+        @apply font-cormorant uppercase text-charcoal text-18 leading-22 font-bold tracking-custom-small whitespace-nowrap
+    }
+    .bottom-nav nav ul li{
+        @apply px-24 border-l-[1px] border-lightbrown
+    }
+    .bottom-nav nav ul li:last-child{
+        @apply !pr-0
+    }
+    .bottom-nav nav ul li:first-child{
+        @apply !pl-0 border-l-0
+    }
+    .social-icons{
+        @apply grid gap-8 grid-cols-3
+    }
+    .social-link{
+        @apply p-7 bg-blue flex justify-center items-center
+    }
+    .social-link img{
+        @apply max-w-18
+    }
+    .hero-section::before{
+        @apply content-[""] absolute top-0 left-0 bg-black/50 w-full h-full pointer-events-none
+    }
+
+    .hero-section .banner-content .content p{
+        @apply !text-30 !font-semibold leading-36
+    }
+    .cultures{
+        @apply bg-skin
+    }
+    .culture{
+        @apply flex items-center gap-20
+    }
+    .culture-slider .swiper-slide{
+        @apply transition-all ease-in-out duration-300
+    }
+    .culture-slider .swiper-slide.swiper-slide-active .culture{
+        @apply flex justify-normal max-md:justify-center
+    }
+    .culture-slider .swiper-slide.swiper-slide-next .culture{
+        @apply flex justify-center
+    }
+    .culture-slider .swiper-slide .culture{
+        @apply flex justify-end
+    }
+    .culture{
+        @apply text-22 leading-22 text-charcoal font-varsailles
+    }
+
+    .culture-section .content strong.second{
+        @apply !text-pink
+    }
+
+
+    .card{
+        @apply relative
+    }
+    .card::before{
+        @apply content-[""] absolute top-5 -left-5 w-full h-full bg-pink z-[-1]
+    }
+    .card-image{
+        @apply relative pt-[102.27%]
+    }
+    .card-image img{
+        @apply absolute top-0 left-0 w-full h-full
+    }
+    .card-body{
+        @apply p-20 bg-white flex flex-col gap-15 shadow-box
+    }
+    .card-body .card-title{
+        @apply max-w-391
+    }
+    .card-description p{
+        @apply !text-20 !font-bold
+    }
+    .card-info{
+        @apply py-6.5 px-10 border-[1px] border-gray rounded-5 
+    }
+}
