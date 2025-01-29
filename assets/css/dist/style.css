@@ -1001,9 +1001,6 @@
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
-  .w-6 {
-    width: calc(var(--spacing) * 6);
-  }
   .w-6\/12 {
     width: calc(6/12 * 100%);
   }
@@ -1865,15 +1862,6 @@
   .p-42 {
     padding: calc(var(--spacing) * 42);
   }
-  .py-27 {
-    padding-block: calc(var(--spacing) * 27);
-  }
-  .py-30 {
-    padding-block: calc(var(--spacing) * 30);
-  }
-  .py-57 {
-    padding-block: calc(var(--spacing) * 57);
-  }
   .py-100 {
     padding-block: calc(var(--spacing) * 100);
   }
@@ -1888,6 +1876,15 @@
   }
   .py-206 {
     padding-block: calc(var(--spacing) * 206);
+  }
+  .py-27 {
+    padding-block: calc(var(--spacing) * 27);
+  }
+  .py-30 {
+    padding-block: calc(var(--spacing) * 30);
+  }
+  .py-57 {
+    padding-block: calc(var(--spacing) * 57);
   }
   .pt-20 {
     padding-top: calc(var(--spacing) * 20);
@@ -3841,7 +3838,7 @@
   .footer {
     background-color: var(--color-darkblue);
     padding-top: calc(var(--spacing) * 85);
-    padding-bottom: calc(var(--spacing) * 10);
+    padding-bottom: calc(var(--spacing) * 15);
   }
   .footer-preheading span {
     font-family: var(--font-varsailles);
@@ -3950,13 +3947,16 @@
   .footer-nav ul {
     display: flex;
     @media (width < 1199px) {
-      display: grid;
+      flex-wrap: wrap;
     }
     @media (width < 1199px) {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      justify-content: center;
     }
     @media (width < 1199px) {
-      gap: calc(var(--spacing) * 20);
+      column-gap: calc(var(--spacing) * 30);
+    }
+    @media (width < 1199px) {
+      row-gap: calc(var(--spacing) * 10);
     }
   }
   .footer-nav ul li {
