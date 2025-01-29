@@ -887,6 +887,9 @@
   .mt-83 {
     margin-top: calc(var(--spacing) * 83);
   }
+  .mt-auto {
+    margin-top: auto;
+  }
   .box-border {
     box-sizing: border-box;
   }
@@ -997,6 +1000,9 @@
   }
   .w-1\/2 {
     width: calc(1/2 * 100%);
+  }
+  .w-6 {
+    width: calc(var(--spacing) * 6);
   }
   .w-6\/12 {
     width: calc(6/12 * 100%);
@@ -1859,6 +1865,15 @@
   .p-42 {
     padding: calc(var(--spacing) * 42);
   }
+  .py-27 {
+    padding-block: calc(var(--spacing) * 27);
+  }
+  .py-30 {
+    padding-block: calc(var(--spacing) * 30);
+  }
+  .py-57 {
+    padding-block: calc(var(--spacing) * 57);
+  }
   .py-100 {
     padding-block: calc(var(--spacing) * 100);
   }
@@ -1870,15 +1885,6 @@
   }
   .py-20 {
     padding-block: calc(var(--spacing) * 20);
-  }
-  .py-27 {
-    padding-block: calc(var(--spacing) * 27);
-  }
-  .py-30 {
-    padding-block: calc(var(--spacing) * 30);
-  }
-  .py-57 {
-    padding-block: calc(var(--spacing) * 57);
   }
   .py-206 {
     padding-block: calc(var(--spacing) * 206);
@@ -3469,6 +3475,8 @@
   }
   .card {
     position: relative;
+    display: flex;
+    flex-direction: column;
   }
   .card::before {
     position: absolute;
@@ -3494,6 +3502,7 @@
   }
   .card-body {
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     gap: calc(var(--spacing) * 15);
     background-color: var(--color-white);
@@ -3940,6 +3949,15 @@
   }
   .footer-nav ul {
     display: flex;
+    @media (width < 1199px) {
+      display: grid;
+    }
+    @media (width < 1199px) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    @media (width < 1199px) {
+      gap: calc(var(--spacing) * 20);
+    }
   }
   .footer-nav ul li {
     border-left-style: var(--tw-border-style);
@@ -3955,6 +3973,13 @@
     }
     &:last-child {
       padding-right: calc(var(--spacing) * 0);
+    }
+    @media (width < 1199px) {
+      border-left-style: var(--tw-border-style);
+      border-left-width: 0px;
+    }
+    @media (width < 1199px) {
+      padding-inline: calc(var(--spacing) * 0);
     }
   }
   .footer-nav ul li a {
