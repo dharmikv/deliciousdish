@@ -36,36 +36,38 @@
             </div>
        </div>
        <nav class="border-b-[1px] border-lightgray">
-        <div class="container-fluid-xl">
-            <div class="flex items-center justify-between py-30 max-large:grid max-large:grid-cols-3">
-                <div class="navbar-brand max-md:max-w-100 max-576:max-w-80">
-                    <a href="#">
-                        <img src="../assets/images/png/nav-logo.png" alt="Delicious dish">
+        <div class="container-fluid-xl max-4xl:px-50 max-xxl:px-40 max-xl:px-35 max-large:px-30 max-lg:px-20">
+            <div class="flex items-center justify-between py-30 max-lg:py-20 gap-10">
+                <div class="navbar-brand flex-1">
+                    <a href="#" class="max-md:max-w-100 max-sm:max-w-80 block">
+                        <img src="../assets/images/png/nav-logo-copy.png" alt="Delicious dish">
                     </a>
                 </div>
-                <div class="title title-secondary orange uppercase text-center">
-                    <h1>Delicious Dish Tours</h1>
+                <div class="flex-2 flex justify-center items-center">
+                    <a href="#">
+                        <img src="../assets/images/png/Delicious Dish Tours.png" class="max-lg:max-w-350 max-sm:max-w-250 max-576:max-w-180" alt="">
+                    </a>
                 </div>
-                <div class="items-center gap-[15px] flex-col min-xl:flex-row hidden min-large:flex">
+                <div class="items-center gap-[15px] min-xl:flex-row hidden min-lg:flex justify-end flex-1">
                     <a href="#" class="cart flex items-center gap-7">
                         <div>
                             <img src="../assets/images/svg/bag.svg" alt="cart icon">
                         </div>
-                        <span class="charcoal">1 item</span>
+                        <span class="charcoal max-xl:hidden">1 item</span>
                     </a>
                     <div class="btn-container">
                         <a href="#" class="btn btn-small btn-pink">Book now</a>
                     </div>
                 </div>
-                <div class="hidden max-large:flex open-button justify-end" >
+                <div class="hidden max-lg:flex open-button justify-end flex-1">
                     <img src="../assets/images/svg/hamburger-menu.svg" alt="">
                 </div>
             </div>
         </div>
        </nav>
-       <div class="bottom-nav min-xl:flex-row hidden min-large:block">
-            <div class="container-fluid-xl">
-                <div class="flex items-center flex-wrap justify-between py-14 bottom-wrapper">
+       <div class="bottom-nav min-xl:flex-row hidden min-lg:block">
+            <div class="container-fluid-xl max-4xl:px-50 max-xxl:px-40 max-xl:px-35 max-large:px-20 max-lg:px-20">
+                <div class="flex items-center flex-wrap justify-between py-14 bottom-wrapper max-xl:flex-col max-xl:gap-10 max-xl:justify-center">
                     <nav>
                         <ul class="flex">
                             <li><a href="#">Small Group Tours</a></li>
@@ -96,14 +98,28 @@
     </header>
 
     <aside class="h-screen sidebar fixed top-0 -right-full bg-white w-full hidden max-large:flex z-[999]">
-        <div class="container-fluid py-20 w-full">
-            <div class="w-full flex justify-end py-18 close-btn">
+        <div class="container-fluid-xl py-20 max-lg:px-20 w-full">
+            <div class="w-full flex justify-end py-20 close-btn">
                 <img src="../assets/images/svg/close.svg" alt="">
             </div>
-           
+            <nav class="h-full">
+                <ul class="flex h-full flex-col items-center justify-center text-center">
+                    <li><a href="#">Small Group Tours</a></li>
+                    <li><a href="#">Private Tours</a></li>
+                    <li><a href="#">Corporate</a></li>
+                    <li><a href="#">Gift Cards</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
         </div>
     </aside>
+    
     <main>
+
         <section class="hero-section relative">
            <div class="pointer-events-none h-full w-full absolute top-0 left-0">
                 <img src="../assets/images/png/hero-banner-image.png" class="w-full h-full object-cover" alt="">
@@ -111,7 +127,7 @@
            <div class="container-fluid">
             <div class="banner-content relative py-206  w-full flex flex-col items-center justify-center ">
                 <div class="title white title-josefins text-center">
-                    <h2>Gourmet food walking tours in <strong class="font-bold">Los Angeles</strong></h2>
+                    <h1>Gourmet food walking tours in <strong class="font-bold">Los Angeles</strong></h1>
                 </div>
                 <div class="content content-secondary white mt-19 max-md:mt-10">
                     <p>Experience Los Angeles Through Your Taste Buds</p>
@@ -280,8 +296,8 @@
 
         <section class="testimonial-section py-100 max-lg:py-70 max-md:py-40 fade-in">
             <div class="container-fluid-xl">
-                <div class="preheading charcoal text-center">
-                    <span>see what our previous guests have to say</span>
+                <div class="title title-josefins charcoal text-center uppercase font-bold">
+                    <h2>see what our previous guests have to say</h2>
                 </div>
                 <div class="swiper tesmonial-swiper mt-42 max-lg:mt-28">
                     <div class="swiper-wrapper">
@@ -328,10 +344,10 @@
             </div>
         </section>
 
-        <section class="who-we-are-section pt-20">
+        <section class="who-we-are-section pt-20 fade-in">
             <div class="flex flex-col items-center fade-in">
-                <div class="preheading charcoal text-center">
-                    <span>who we are</span>
+                <div class="title title-josefins charcoal text-center uppercase font-bold">
+                    <h2>who we are</h2>
                 </div>
                 <div class="content content-secondary text-center max-w-756 max-md:max-w-[unset] max-md:mt-10">
                     <p>Our passion lies in curating immersive food tours that showcase the diverse culinary landscape of our city.</p>
@@ -368,7 +384,7 @@
 
         <section class="contact-section py-57 bg-skin">
             <div class="container-fluid-xl">
-                <div class="test min-xl:px-72.5 flex items-center max-xl:flex-col justify-between gap-60 max-xl:text-center max-xl:gap-30">
+                <div class="test min-xl:px-72.5 flex items-center max-xl:flex-col justify-between gap-60 max-xl:text-center max-xl:gap-30 fade-in">
                     <div class="flex flex-col">
                         <div class="title font-josefins charcoal font-bold uppercase leading-40">
                             <h5>Stay up to date</h5>
@@ -390,14 +406,14 @@
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer fade-in">
         <div class="container-fluid-xl">
-            <div class="footer-preheading flex justify-center text-center gray">
+            <div class="footer-preheading flex justify-center text-center gray mb-16">
                 <span>Local food, global flavors.</span>
             </div>
-            <div class="title title-secondary footer-title text-center white mt-10">
-                <h2>Delicious Dish Tours</h2>
-            </div>
+            <a href="#" class="footer-expand-logo">
+                <img src="../assets/images/png/Delicious Dish Tours-footer.png" alt="">
+            </a>
             <div class="footer-links flex justify-center mt-40 max-md:mt-20 max-md:flex-col max-md:items-center">
                 <a href="mailto:info@deliciousdishtours.com">
                     <div class="w-fit">
@@ -412,7 +428,6 @@
                     <span>+1 310-734-8193</span>
                 </a>
             </div>
-            
         </div>
         <nav class="flex justify-center w-full footer-nav">
            <div class="container-fluid-xl">
@@ -452,6 +467,7 @@
             </div>
         </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/gsap.min.js"></script>

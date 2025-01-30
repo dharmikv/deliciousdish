@@ -17,6 +17,7 @@
       --breakpoint-xl: 1280px;
       --breakpoint-xxl: 1440px;
       --breakpoint-xxxl: 1512px;
+      --breakpoint-4xl:1560px;
 
         /* ======================================================= FONT SIZE ============================================================ */
 
@@ -125,6 +126,9 @@
 }
 
 @layer base{
+
+    /* ======================================================= CONTAINER-FLUID ======================================================= */
+    
     .container-fluid-lg{
         @apply px-100 max-lg:px-50 max-md:px-30 max-sm:px-20
     }
@@ -139,21 +143,20 @@
 
     h1,
     .h1 {
-        @apply text-66 leading-66
-         max-xxl:text-52 max-xxl:leading-52
-            max-xl:text-48 max-xl:leading-48
-                max-large:text-42 max-large:leading-42
-                    max-lg:text-38 max-lg:leading-38
-                     max-md:text-28 max-md:leading-28
-                        max-sm:text-24 max-sm:leading-24    
-    }
-    h2,
-    .h2 {
         @apply text-50 leading-50
             max-xxl:text-40 max-xxl:leading-40
              max-lg:text-38 max-lg:leading-38
                 max-md:text-32 max-md:leading-32
                     max-sm:text-28 max-sm:leading-28
+    }
+    h2,
+    .h2{
+        @apply text-40 leading-40
+        max-xxxl:text-38 max-xxxl:leading-38
+            max-xxl:text-36
+                max-xl:text-32
+                    max-lg:text-30 max-lg:leading-30
+                        max-md:text-28
     }
     h3,
     .h3 {
@@ -197,6 +200,9 @@
     .title-josefins h6 {
         @apply font-josefins
     }
+
+    /* ======================================================= COLORS ======================================================= */
+
     .charcoal{
         @apply text-charcoal
     }
@@ -209,6 +215,12 @@
     .gray{
         @apply text-gray
     }
+    .pink{
+        @apply text-pink
+    }
+
+    /* ======================================================= CONTENT ======================================================= */
+
     .content p {
         @apply mt-10 text-18 leading-28
             max-md:text-16 max-md:leading-24
@@ -231,14 +243,9 @@
     .content-secondary p{
         @apply !font-cormorant
     }
-    .preheading span{
-        @apply text-40 text-charcoal uppercase font-josefins font-bold
-            max-xxxl:text-38 leading-38
-                max-xxl:text-36
-                    max-xl:text-32
-                        max-lg:text-30 max-lg:leading-30
-                            max-md:text-28
-    }
+
+    /* ======================================================= CONTENT ======================================================= */
+
     .top-bar-head span{
         @apply text-22 uppercase font-varsailles
             max-xxxl:text-20 max-xxxl:leading-20
@@ -249,6 +256,9 @@
 }
 
 @layer components{
+
+    /* ======================================================= BUTTON ======================================================= */
+
     .btn {
       @apply py-13 px-30 uppercase font-cormorant tracking-custom font-semibold inline-block cursor-pointer max-xs:py-10 max-xs:px-28 flex items-center justify-center text-center;
     }
@@ -277,15 +287,26 @@
         @apply bg-white text-blue border-[1px] transition-all ease-in-out duration-300
     }    
 
+    /* ======================================================= INPUT ======================================================= */
+
     .ctm-input{
         @apply w-full h-auto bg-white border-[1px] border-semigray px-20
     }
     .ctm-input input{
         @apply h-full w-full pl-40 placeholder:font-josefins placeholder:text-charcoal placeholder:text-18 placeholder:max-md:text-16 placeholder:leading-18 placeholder:max-md:leading-16 focus-visible:outline-none
     }
+    .ctm-input{
+        @apply relative
+    }
+    .ctm-input::before{
+        @apply content-[""] absolute top-[50%] left-20 translate-y-[-50%] bg-contain w-full h-full max-w-24 max-h-24 bg-[url(../../images/svg/mail-icon.svg)] bg-no-repeat
+    }
 }
 
 @layer utilities{
+
+    /* ======================================================= HEADER ======================================================= */
+
     .is-sticky {
         animation: headerStickyAnimation 0.5s ease-in-out;
         @apply fixed top-0 left-0 w-full z-50 transition-all duration-500;
@@ -306,25 +327,6 @@
     .header{
         @apply bg-white
     }
-    .top-bar{
-        @apply bg-skin py-10
-    }
-    .top-bar-links a,
-    .footer-links a{
-        @apply flex gap-12
-    }
-    .top-bar-links a span{
-        @apply font-josefins text-charcoal font-medium transition-all duration-300 ease-in-out
-    }
-    .top-bar-links a span:hover{
-        @apply text-charcoal/60 transition-all duration-300 ease-in-out
-    }
-    .footer-links a img{
-        filter: brightness(0) saturate(100%) invert(100%) sepia(94%) saturate(1%) hue-rotate(290deg) brightness(116%) contrast(101%);filter: brightness(0) saturate(100%) invert(100%) sepia(94%) saturate(1%) hue-rotate(290deg) brightness(116%) contrast(101%);
-    }
-    .footer-links a span{
-        @apply font-josefins text-white font-medium
-    }
     header nav .cart span{
         @apply font-josefins text-16 tracking-custom
     }
@@ -332,13 +334,13 @@
         @apply overflow-x-auto
     }
     .bottom-nav nav ul li a{
-        @apply font-cormorant uppercase text-charcoal text-18 leading-22 font-bold tracking-custom-small whitespace-nowrap transition-all duration-300 ease-in-out
+        @apply font-cormorant uppercase text-charcoal text-18 leading-22 font-bold tracking-custom-small whitespace-nowrap transition-all duration-300 ease-in-out max-xl:text-16
     }
     .bottom-nav nav ul li a:hover{
-        @apply text-charcoal/60 transition-all duration-300 ease-in-out
+        @apply text-orange transition-all duration-300 ease-in-out
     }
     .bottom-nav nav ul li{
-        @apply px-24 border-l-[1px] border-lightbrown pb-10 relative
+        @apply  border-l-[1px] border-lightbrown relative min-lg:px-13 min-xl:px-18 min-xxl:px-24
     }
     
     .bottom-nav nav ul li:last-child{
@@ -359,6 +361,39 @@
     .social-link:hover img{
         filter: brightness(0) saturate(100%) invert(43%) sepia(9%) saturate(3565%) hue-rotate(170deg) brightness(90%) contrast(81%);
     }
+
+    /* ======================================================= TOP BAR ======================================================= */
+
+    .top-bar{
+        @apply bg-skin py-10
+    }
+    .top-bar-links a,
+    .footer-links a{
+        @apply flex gap-12
+    }
+    .top-bar-links a span{
+        @apply font-josefins text-charcoal font-medium transition-all duration-300 ease-in-out
+    }
+    .top-bar-links a span:hover{
+        @apply text-orange transition-all duration-300 ease-in-out
+    }
+    .top-bar-links a img{
+        @apply transition-all duration-300 ease-in-out
+    }
+    .top-bar-links a span:hover ~ a img{
+        @apply transition-all duration-300 ease-in-out;
+        filter: brightness(0) saturate(100%) invert(48%) sepia(63%) saturate(4570%) hue-rotate(355deg) brightness(96%) contrast(105%);
+    }
+
+    /* ======================================================= FOOTER ======================================================= */
+
+    .footer-links a img{
+        filter: brightness(0) saturate(100%) invert(100%) sepia(94%) saturate(1%) hue-rotate(290deg) brightness(116%) contrast(101%);filter: brightness(0) saturate(100%) invert(100%) sepia(94%) saturate(1%) hue-rotate(290deg) brightness(116%) contrast(101%);
+    }
+    .footer-links a span{
+        @apply font-josefins text-white font-medium
+    }
+    
     footer .social-link{
         @apply !bg-pink border-1 border-pink transition-all ease-in-out duration-300
     }
@@ -378,6 +413,9 @@
                 max-md:!text-20
                     max-sm:!text-16
     }
+
+    /* ======================================================= CULTURE SLIDER ======================================================= */
+
     .cultures{
         @apply bg-skin
     }
@@ -402,11 +440,11 @@
                 max-992:text-16 max-992:leading-16
     }
 
+    /* ======================================================= CULTURE SECTION ======================================================= */
+
     .culture-section .content strong.second{
         @apply !text-pink
     }
-
-
     .card{
         @apply relative flex flex-col
     }
@@ -442,6 +480,7 @@
         @apply text-16 tracking-custom font-josefins font-medium capitalize
     }
 
+    /* ======================================================= PRIVATE TOUR SECTION ======================================================= */
 
     .private-tours-section{
         @apply relative
@@ -469,6 +508,8 @@
                 max-lg:text-16
     }
 
+    /* ======================================================= TESTIMONIAL SECTION ======================================================= */
+
 
     .tesmonial-swiper .swiper-slide{
         @apply px-39 py-10 max-large:px-20
@@ -492,10 +533,14 @@
         @apply !font-light line-clamp-6
     }
 
+    /* ======================================================= WHO WE ARE SECTION ======================================================= */
+
     .who-we-are-section .content p{
         @apply text-30 leading-36
             max-xl:text-18 max-xl:leading-22
     }
+
+    /* ======================================================= TRIANGLE SECTION ======================================================= */
 
     .tringle-pattern{
         @apply relative
@@ -514,6 +559,8 @@
         @apply !text-18 !leading-26
     }
 
+    /* ======================================================= CONTACT SECTION ======================================================= */
+
     .contact-section .title h5{
         @apply text-40 leading-40
         max-xxxl:text-38 max-xxl:leading-38
@@ -522,12 +569,7 @@
                         max-lg:text-30 max-lg:leading-30
                             max-md:text-28
     }
-    .ctm-input{
-        @apply relative
-    }
-    .ctm-input::before{
-        @apply content-[""] absolute top-[50%] left-20 translate-y-[-50%] bg-contain w-full h-full max-w-24 max-h-24 bg-[url(../../images/svg/mail-icon.svg)] bg-no-repeat
-    }
+    /* ======================================================= FOOTER SECTION ======================================================= */
 
     .footer{
         @apply pt-85 bg-darkblue pb-15
@@ -538,14 +580,8 @@
                 max-sm:text-16 max-sm:leading-16
             
     }
-    .footer .footer-title h2{
-        @apply !text-100 !leading-100
-            max-xxxl:!text-80 max-xxxl:!leading-80
-                max-xxl:!text-50 max-xxl:!leading-50
-                    max-xl:!text-40 max-xl:!leading-40
-                        max-lg:!text-30 max-lg:!leading-30
-                            max-md:!text-28 max-md:!leading-28
-            
+    .footer-expand-logo{
+        @apply flex justify-center items-center
     }
     .footer-links{
         @apply max-md:gap-10
