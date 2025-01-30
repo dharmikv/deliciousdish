@@ -3220,6 +3220,25 @@
       }
     }
   }
+  .ctm-input {
+    position: relative;
+  }
+  .ctm-input::before {
+    position: absolute;
+    top: 50%;
+    left: calc(var(--spacing) * 20);
+    height: 100%;
+    max-height: calc(var(--spacing) * 24);
+    width: 100%;
+    max-width: calc(var(--spacing) * 24);
+    --tw-translate-y: -50%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+    background-image: url(../../images/svg/mail-icon.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    --tw-content: "";
+    content: var(--tw-content);
+  }
 }
 @layer utilities {
   .is-sticky {
@@ -3451,7 +3470,7 @@
     left: calc(var(--spacing) * 0);
     height: 100%;
     width: 100%;
-    background-color: color-mix(in oklab, var(--color-black) 50%, transparent);
+    background-color: #041F1C;
     --tw-content: "";
     content: var(--tw-content);
   }
@@ -3871,25 +3890,6 @@
     @media (width < 768px) {
       font-size: var(--text-28);
     }
-  }
-  .ctm-input {
-    position: relative;
-  }
-  .ctm-input::before {
-    position: absolute;
-    top: 50%;
-    left: calc(var(--spacing) * 20);
-    height: 100%;
-    max-height: calc(var(--spacing) * 24);
-    width: 100%;
-    max-width: calc(var(--spacing) * 24);
-    --tw-translate-y: -50%;
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-    background-image: url(../../images/svg/mail-icon.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    --tw-content: "";
-    content: var(--tw-content);
   }
   .footer {
     background-color: var(--color-darkblue);

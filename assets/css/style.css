@@ -128,7 +128,7 @@
 @layer base{
 
     /* ======================================================= CONTAINER-FLUID ======================================================= */
-    
+
     .container-fluid-lg{
         @apply px-100 max-lg:px-50 max-md:px-30 max-sm:px-20
     }
@@ -404,7 +404,7 @@
         @apply max-w-18
     }
     .hero-section::before{
-        @apply content-[""] absolute top-0 left-0 bg-black/50 w-full h-full pointer-events-none
+        @apply content-[""] absolute top-0 left-0 bg-[#041F1C] w-full h-full pointer-events-none
     }
 
     .hero-section .banner-content .content p{
